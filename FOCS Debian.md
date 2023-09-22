@@ -14,7 +14,7 @@ This guide assumes that you are installing FOCS Debian by using VMware. However,
 
 ## Premable
 
-FOCS Debian is a Debian distribution. It is designed by and for fellow JIers. It features the *K Desktop Environment* by default, a desktop environment that mimics the look and feel of Windows, yet remains highly customizable. It also have software repositories for common software including VSCode and Mattermost preconfigured, such as to provide a non-disturbing experience for users new to the Linux world. You can try out FOCS Debian directly from a USB stick without installing it, or you can install it on your computer as your daily operating system. This guide will guide you through the installation of FOCS Debian.
+FOCS Debian is a Debian distribution. It is designed by and for fellow JIers. It features the *K Desktop Environment* by default, a desktop environment that mimics the look and feel of Windows, yet remains highly customizable. It also have software repositories for common software including VSCode and Mattermost preconfigured, such as to provide a non-disturbing experience for users new to Linux. You can try out FOCS Debian directly from a USB stick before installing it, then you can install it on your computer as your daily operating system. This guide will guide you through the installation of FOCS Debian.
 
 ## Linux Installation
 
@@ -32,7 +32,7 @@ If you want to burn it into a USB stick to install on your computer, you need a 
 
 *If you're on an old Windows 10 computer, or if you want to install on your physical computer, you can safely skip this step*
 
-If you're using Windows 11 or using WSL on Windows 10, you have Hyper-V setup on your system. Hyper-V and VMware are incompatible; you need to enable Windows Hypervisor Platform in order to use VMware alongside with Hyper-V.
+If you're using Windows 11, you have Hyper-V setup on your system. Hyper-V and VMware are incompatible; you need to enable Windows Hypervisor Platform in order to use VMware alongside with Hyper-V.
 
 In *Settings*, under *Apps* -> *Optional Features*, click on *More Windows Features* in the bottom (Win11) or on the right (Win10)
 
@@ -52,7 +52,7 @@ Note that this step is also necessary if you want to install FOCS Debian on Virt
 
 - Enter a name for your VM.
 
-- You can leave all options at their default. If you want to expand the size of the hard disk, you may do so.
+- It's recommended to adjust the hardware settings. At least 20 GB of hard disk, 4 GB of memory and 8 processor cores are recommended. The more you give memory and processor cores, the better the performance will be.
 
   The VM will automatically power on when you finish the wizard.
 
@@ -86,31 +86,39 @@ Note that this step is also necessary if you want to install FOCS Debian on Virt
 
 - Click Install to begin installation. Depending on the performance of your computer it may last for several minutes.
 
-- Reboot when finishing, remove the USB stick when proposed (if you are on a physical machine)
+- Reboot when finishing, remove the USB stick when proposed (if you are installing on your disk)
 
 
 
 #### Welcome to your new Linux world!
 
-If you installed FOCS Debian on your physical computer and want to return to Windows, reboot your computer and navigate to "Windows Boot Manager" using the arrow keys, when the boot menu shows up.
+If you installed FOCS Debian on your physical computer and want to return to Windows, reboot your computer and navigate to "Windows Boot Manager" in the boot manager. You need to press system specific key when you turn on your computer to enter the boot menu.
 
 #### FAQ after installation
 
-- The performance of the Virtual Machine can't be worse.
+- The performance of the Virtual Machine is not satisfiable.
 
   - Try to increase more memory or allocate more processor cores in VM settings. 
     - In VMware this is pretty straightforward.
     - In VirtualBox, you need to navigate to *System* under VM settings. You can increase more memory there. You also need to navigate to *System* -> *Processor* to increase processor core count, and enable Nested Paging under *System* -> *Acceleration*.
 
+- I want to open folders with double click instead of single click.
+
+  - You can change it in the following section (:
+
+    ![image](https://github.com/Bunyod-Suvonov/FOCS_Debian_Install_Guide/assets/109164894/330341c4-007f-4ebe-8cd2-3ce410b3640f)
+
+
 - The icons, mouse cursor, text... is too small!
+
+  - Change display scale factor here:
+
+  ![image-20230922020615633](images/scale_factor.png)
 
   - Change mouse cursor size in System Settings:
 
     ![image-20230922020800446](images/cursor.png)
 
-  - Change display scale factor here:
-
-  ![image-20230922020615633](images/scale_factor.png)
   
   - Right click on the taskbar to adjust its height.
   
